@@ -173,7 +173,7 @@ export default function HomeHeroSection() {
                   maxWidth: 'none',
                   height: '90rem',
                   position:'absolute',
-                  top: '40%',
+                  top: '46%',
                   left: '50%',
                   transform: `translate(-50%, -50%)`,
                 }}

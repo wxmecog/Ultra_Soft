@@ -1,93 +1,156 @@
-import { m } from 'framer-motion';
-import PropTypes from 'prop-types';
+import { useScroll } from 'framer-motion';
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { varFade, MotionContainer } from 'src/components/animate';
+
+// ----------------------------------------------------------------------
+
+const StyledRoot = styled('div')(({ theme }) => ({
+  width: '100%',
+  height: '100vh',
+  position: 'relative',
+  [theme.breakpoints.up('md')]: {
+    top: 0,
+    left: 0,
+    position: 'fixed',
+  },
+}));
+
+const StyledWrapper = styled('div')(({ theme }) => ({
+  height: '100%',
+  overflow: 'hidden',
+  position: 'relative',
+  [theme.breakpoints.up('md')]: {
+  },
+}));
 
 // ----------------------------------------------------------------------
 
 export default function AboutHero() {
+  const heroRef = useRef(null);
+
+  const { scrollY } = useScroll();
+
+  const [percent, setPercent] = useState(0);
+
+  const getScroll = useCallback(() => {
+    let heroHeight = 0;
+
+    if (heroRef.current) {
+      heroHeight = heroRef.current.offsetHeight;
+    }
+
+    scrollY.on('change', (scrollHeight) => {
+      const scrollPercent = (scrollHeight * 100) / heroHeight;
+
+      setPercent(Math.floor(scrollPercent));
+    });
+  }, [scrollY]);
+
+  useEffect(() => {
+    getScroll();
+  }, [getScroll]);
+
+  const opacity = 1 - percent / 100;
+
+  const hide = percent > 120;
+
   return (
-    <Box
-      sx={{
-        height: { md: 560 },
-        py: { xs: 10, md: 0 },
-        overflow: 'hidden',
-        position: 'relative',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundImage:
-          'url(/assets/background/overlay_1.svg), url(/assets/images/about/hero.jpg)',
-      }}
-    >
-      <Container component={MotionContainer}>
-        <Box
-          sx={{
-            bottom: { md: 80 },
-            position: { md: 'absolute' },
-            textAlign: {
-              xs: 'center',
-              md: 'unset',
-            },
-          }}
-        >
-          <TextAnimate text="Who" variants={varFade().inRight} sx={{ color: 'primary.main' }} />
-
-          <br />
-
-          <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
-            <TextAnimate text="we" />
-            <TextAnimate text="are?" />
-          </Stack>
-
-          <m.div variants={varFade().inRight}>
-            <Typography
-              variant="h4"
+    <Stack sx={{ position: 'relative', overflow:'hidden', width: { sm : '98vw', xs: '100vw' }, height: '100vh' }}> 
+      <StyledRoot
+        ref={heroRef}
+        sx={{
+          ...(hide && {
+            opacity: 0,
+          }),
+        }}
+      >
+        <StyledWrapper>
+          <Container sx={{ height: 1, px: `0px !important`, zIndex: 5000}}>
+            <>
+              <Box
+                component='img'
+                src="https://cdn.prod.website-files.com/632993e1d1acbfa5635afd0b/63f90867efa3cc78033066fb_Group%20427320290.svg"
+                sx={{
+                  width: '33rem',
+                  maxWidth: 'none',
+                  height: '33rem',
+                  position:'absolute',
+                  top: '20%',
+                  right: { md: '18%', xs: '35%'},
+                  display: { lg: 'block', xs: 'none'}
+                }}
+              />
+              <Box
+                component='img'
+                src="https://cdn.prod.website-files.com/632993e1d1acbfa5635afd0b/63f8b253f0f51cc5ea3649ef_Frame%20427321323.svg"
+                sx={{
+                  width: 1,
+                  height: 1,
+                  position:'absolute',
+                  display: { sm: 'block', xs: 'none'}
+                }}
+              />
+              <Box
+                component='img'
+                src="https://cdn.prod.website-files.com/632993e1d1acbfa5635afd0b/63f8b2e00843821f249201ab_Gradient%20BG.svg"
+                sx={{
+                  width: '150rem',
+                  maxWidth: 'none',
+                  height: '90rem',
+                  position:'absolute',
+                  top: '46%',
+                  left: '50%',
+                  transform: `translate(-50%, -50%)`,
+                }}
+              />
+            </>
+            <Stack
+              direction="column"
+              alignItems="start"
+              justifyContent="center"
               sx={{
-                mt: 3,
-                color: 'common.white',
-                fontWeight: 'fontWeightSemiBold',
+                height: 1,
+                maxWidth: 480,
+                opacity: opacity > 0 ? opacity : 0,
+                mt: {
+                  sm: 2, xs: 4
+                },
+                mx: {xl: -4, sm:4,  xs: 2},
+                position: 'absolute',
+                zIndex: 500,
               }}
+              gap={8}
             >
-              Let&apos;s work together and
-              <br /> make awesome site easily
-            </Typography>
-          </m.div>
-        </Box>
-      </Container>
-    </Box>
+              <Stack sx={{gap: {sm: 4, xs: 2}}}>
+                <Stack>
+                  <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important', color: "ultra.main" }}>
+                    The Best
+                  </Typography>
+                  <Stack sx={{ flexDirection: { md: 'column', xs: 'column', spacing: { sm: 4, xs: 0 }}}} pl={5}>
+                    <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important'}}>
+                      Development
+                    </Typography>
+                    <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important',
+                    pl: { sm: 2, xs: 0 } }}>
+                      Experience
+                    </Typography>
+                  </Stack>
+                </Stack>
+
+                <Typography sx={{ fontSize: 20, fontFamily: 'Inter, sans-serif !important' }}>
+                  <span style={{ color: '#e84142', fontSize: '24px' }}>Ultra Software Labs</span> provides a seamless and collaborative development experience, leveraging expertise in web, mobile, and e-commerce solutions to turn your vision into reality.
+                </Typography>
+              </Stack>
+            </Stack>
+          </Container>
+        </StyledWrapper>
+      </StyledRoot>
+    </Stack>
   );
 }
-
-// ----------------------------------------------------------------------
-
-function TextAnimate({ text, variants, sx, ...other }) {
-  return (
-    <Box
-      component={m.div}
-      sx={{
-        typography: 'h1',
-        overflow: 'hidden',
-        display: 'inline-flex',
-        ...sx,
-      }}
-      {...other}
-    >
-      {text.split('').map((letter, index) => (
-        <m.span key={index} variants={variants || varFade().inUp}>
-          {letter}
-        </m.span>
-      ))}
-    </Box>
-  );
-}
-
-TextAnimate.propTypes = {
-  sx: PropTypes.object,
-  text: PropTypes.string,
-  variants: PropTypes.object,
-};

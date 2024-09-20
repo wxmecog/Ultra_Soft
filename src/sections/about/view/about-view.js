@@ -3,14 +3,14 @@
 import Box from '@mui/material/Box';
 
 import AboutTeam from '../about-team';
-import AboutHeroSection from '../sections/about-hero-section';
+import AboutHero from '../about-hero';
 
 // ----------------------------------------------------------------------
 
 export default function AboutView() {
   return (
     <>
-      <AboutHeroSection />
+      <AboutHero />
 
       <Box
           sx={{
