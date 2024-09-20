@@ -18,8 +18,8 @@ export default function StyledProgressBar() {
             zIndex: 9999,
             width: '100%',
             position: 'fixed',
-            backgroundColor: theme.palette.primary.main,
-            boxShadow: `0 0 2px ${theme.palette.primary.main}`,
+            backgroundColor: theme.palette.ultra.main,
+            boxShadow: `0 0 2px ${theme.palette.ultra.main}`,
           },
           '.peg': {
             right: 0,
@@ -29,7 +29,7 @@ export default function StyledProgressBar() {
             display: 'block',
             position: 'absolute',
             transform: 'rotate(3deg) translate(0px, -4px)',
-            boxShadow: `0 0 10px ${theme.palette.primary.main}, 0 0 5px ${theme.palette.primary.main}`,
+            boxShadow: `0 0 10px ${theme.palette.ultra.main}, 0 0 5px ${theme.palette.ultra.main}`,
           },
         },
       }}

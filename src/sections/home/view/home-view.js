@@ -5,6 +5,8 @@ import { useScroll } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
+import MainLayout from 'src/layouts/main';
+
 import ScrollProgress from 'src/components/scroll-progress';
 
 import HomeHeroSection from '../sections/home-hero-section';
@@ -20,7 +22,7 @@ export default function HomeView() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <>
+    <MainLayout>
       <ScrollProgress scrollYProgress={scrollYProgress} />
       <Stack>
         <HomeHeroSection />
@@ -39,6 +41,6 @@ export default function HomeView() {
           <HomeFeedbackSection />
         </Box>
       </Stack>
-    </>
+    </MainLayout>
   );
 }
