@@ -10,7 +10,6 @@ import MainLayout from 'src/layouts/main';
 import ScrollProgress from 'src/components/scroll-progress';
 
 import HomeHeroSection from '../sections/home-hero-section';
-import HomeShowSection from '../sections/home-show-section';
 import HomeWeDoSection from '../sections/home-we-do-section';
 import HomeFeedbackSection from '../sections/home-feedback-section';
 
@@ -36,7 +35,7 @@ export default function HomeView() {
         > 
           <HomeWeDoSection />
 
-          <HomeShowSection />
+          {/* <HomeShowSection /> */}
 
           <HomeFeedbackSection />
         </Box>
