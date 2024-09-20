@@ -13,7 +13,7 @@ import { MapPopup, MapMarker, MapControl } from 'src/components/map';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   zIndex: 0,
-  height: 560,
+  height: 510,
   overflow: 'hidden',
   position: 'relative',
   borderRadius: theme.shape.borderRadius,

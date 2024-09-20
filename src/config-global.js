@@ -28,7 +28,7 @@ export const AUTH0_API = {
   callbackUrl: process.env.NEXT_PUBLIC_AUTH0_CALLBACK_URL,
 };
 
-export const MAPBOX_API = process.env.NEXT_PUBLIC_MAPBOX_API;
+export const MAPBOX_API = 'pk.eyJ1IjoibmV3bWlyYS1tYXBzIiwiYSI6ImNscHE1MW0zeDFlZXAydnA2bnBsaG9tM24ifQ.HEvi2k69KJnJQZk1dbu7bw';
 
 // ROOT PATH AFTER LOGIN SUCCESSFUL
 export const PATH_AFTER_LOGIN = paths.dashboard.root; // as '/dashboard'
