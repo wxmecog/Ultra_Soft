@@ -1,6 +1,6 @@
 {
-  "name": "Minimal UI",
-  "short_name": "Minimal UI",
+  "name": "UltraSoftLabs",
+  "short_name": "UltraSoftLabs",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#000000",
