@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3030",
-    "start": "next start -p 3030",
+    "start": "node server.js",
     "build": "next build",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
