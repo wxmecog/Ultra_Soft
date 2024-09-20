@@ -99,7 +99,14 @@ export default function HomeHeroSection() {
   );
 
   return (
-    <Stack sx={{ position: 'relative', overflow:'hidden', width: { sm : '98vw', xs: '100vw' }, height: '100vh' }}> 
+    <Stack 
+      sx={{ 
+        position: 'relative', 
+        overflow:'hidden', 
+        width: { sm : '98vw', xs: '100vw' }, 
+        height: '100vh',
+      }}
+      > 
       <StyledRoot
         ref={heroRef}
         sx={{
