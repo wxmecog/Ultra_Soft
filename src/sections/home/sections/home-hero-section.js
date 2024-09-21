@@ -8,6 +8,8 @@ import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
+import { useRouter } from 'src/routes/hooks';
+
 import { bgBlur } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
@@ -61,6 +63,8 @@ const StyledPolygon = styled('div')(({ opacity = 1, anchor = 'left', theme }) =>
 // ----------------------------------------------------------------------
 
 export default function HomeHeroSection() {
+  const router = useRouter();
+
   const heroRef = useRef(null);
 
   const { scrollY } = useScroll();
@@ -80,6 +84,10 @@ export default function HomeHeroSection() {
       setPercent(Math.floor(scrollPercent));
     });
   }, [scrollY]);
+
+  const handleNavigate = () => {
+    router.push('contact-us')
+  };
 
   useEffect(() => {
     getScroll();
@@ -226,6 +234,7 @@ export default function HomeHeroSection() {
                 rel="noopener"
                 href=""
                 sx={{ borderRadius:5, height: 58, px:2.5, fontSize: '18px', width: { sm: 'auto', xs: 1} }}
+                onClick={() => handleNavigate()}
               >
                 Get Started
               </Button>

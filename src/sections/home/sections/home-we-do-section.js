@@ -5,6 +5,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
+import { useRouter } from 'src/routes/hooks';
+
 import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
@@ -48,6 +50,12 @@ const CardList = [
 
 export default function HomeWeDoSection() {
   const theme = useTheme();
+  
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push('contact-us')
+  };
 
   return (
     <Container
@@ -152,6 +160,7 @@ export default function HomeWeDoSection() {
                     },
                     transition: 'all 0.1s ease',
                   }}
+                  onClick={()=> handleNavigate()}
                 >
                   Contact Us
                 </Typography>
