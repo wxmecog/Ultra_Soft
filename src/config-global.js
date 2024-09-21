@@ -4,7 +4,7 @@ import { paths } from 'src/routes/paths';
 // ----------------------------------------------------------------------
 
 export const HOST_API = process.env.NEXT_PUBLIC_HOST_API;
-export const ASSETS_API = process.env.NEXT_PUBLIC_ASSETS_API;
+export const ASSETS_API = 'https://api-dev-minimal-v510.vercel.app';
 
 export const FIREBASE_API = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
