@@ -84,7 +84,7 @@ const StyledNavItem = styled(ListItemButton, {
       padding: 0,
       textTransform: 'uppercase',
       height: '100%',
-      fontSize: 14,
+      fontSize: { md: 18, xs : 14 },
       fontWeight: theme.typography.fontWeightMedium,
       transition: theme.transitions.create(['all'], {
         duration: theme.transitions.duration.shorter,

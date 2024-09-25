@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 const StyledRoot = styled('div')(({ theme }) => ({
   width: '100%',
   height: '100vh',
+  overflow: 'hidden',
   position: 'relative',
   [theme.breakpoints.up('md')]: {
     top: 0,
@@ -133,10 +134,10 @@ export default function AboutHero() {
                     The Best
                   </Typography>
                   <Stack sx={{ flexDirection: { md: 'column', xs: 'column', spacing: { sm: 4, xs: 0 }}, pl: { md:5, xs: 0 }}}>
-                    <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important'}}>
+                    <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 46 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important'}}>
                       Development
                     </Typography>
-                    <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important',
+                    <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 46 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important',
                     pl: { sm: 2, xs: 0 } }}>
                       Experience
                     </Typography>
