@@ -80,9 +80,9 @@ export default function Header() {
       >
         <Container sx={{ height: 1, display: 'flex', alignItems: 'center', px: `0px !important` }} maxWidth="lg" >
           <Stack sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent:'space-between', width: 1, mx: {xl: -4, md:4,  xs: 2}}}>
-            <Stack sx={{ flexDirection: 'row', alignItems: 'end', gap: 1}}>
+            <Stack sx={{ flexDirection: 'row', alignItems: 'end', gap: '2px'}}>
               <Logo />
-              <Typography pb={1} sx={{ whiteSpace: 'nowrap'}} ><span style={{ color: '#e84142', fontSize: '20px', fontWeight: 700 }}>U</span>ltra Software Labs</Typography>
+              <Typography sx={{ whiteSpace: 'nowrap', fontSize: 22, marginBottom: '-4px' }} >ltra Software Labs</Typography>
             </Stack>
 
             <Box sx={{ flexGrow: 1 }} />

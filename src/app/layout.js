@@ -25,10 +25,10 @@ export const metadata = {
   manifest: '/manifest.json',
   viewport: { width: 'device-width', initialScale: 1, maximumScale: 1 },
   icons: [
-    { rel: 'icon', url: '/logo/logo_single.svg' },
-    { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/logo/logo_single.svg' },
-    { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/logo/logo_single.svg' },
-    { rel: 'apple-touch-icon', sizes: '180x180', url: '/favicon/apple-touch-icon.png' },
+    { rel: 'icon', url: '/logo/ultra.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/logo/ultra.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/logo/ultra.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', url: '/logo/ultra.png' },
   ],
 };
 

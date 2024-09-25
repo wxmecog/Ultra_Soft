@@ -132,7 +132,7 @@ export default function AboutHero() {
                   <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important', color: "ultra.main" }}>
                     The Best
                   </Typography>
-                  <Stack sx={{ flexDirection: { md: 'column', xs: 'column', spacing: { sm: 4, xs: 0 }}}} pl={5}>
+                  <Stack sx={{ flexDirection: { md: 'column', xs: 'column', spacing: { sm: 4, xs: 0 }}, pl: { md:5, xs: 0 }}}>
                     <Typography sx={{ textTransform: "uppercase", fontSize: { sm: 88, xs: 50 }, lineHeight: 1.1, fontWeight: 400, fontFamily: 'Whyte Inktrap, sans-serif !important'}}>
                       Development
                     </Typography>

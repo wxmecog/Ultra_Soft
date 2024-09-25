@@ -76,11 +76,11 @@ const StyledNavItem = styled(ListItemButton, {
     fontWeight: theme.typography.fontWeightMedium,
     height: 48,
     ...(active && {
-      color: theme.palette.primary.main,
+      color: theme.palette.ultra.main,
       fontWeight: theme.typography.fontWeightSemiBold,
-      backgroundColor: alpha(theme.palette.primary.main, 0.08),
+      backgroundColor: alpha(theme.palette.ultra.main, 0.08),
       '&:hover': {
-        backgroundColor: alpha(theme.palette.primary.main, 0.16),
+        backgroundColor: alpha(theme.palette.ultra.main, 0.16),
       },
     }),
     ...(opened && {

@@ -44,7 +44,7 @@ export default function ContactForm() {
       </Stack>
 
       <m.div variants={varFade().inUp}>
-        <Button size="large" variant="contained" color="ultra">
+        <Button size="large" variant="contained" color="ultra" sx={{ borderRadius: 5 }}>
           Submit Now
         </Button>
       </m.div>
