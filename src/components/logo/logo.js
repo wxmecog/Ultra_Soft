@@ -21,7 +21,7 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
         ...sx,
       }}
       {...other}
-      src='/logo/ultra.png'
+      src='/logo/logo_ultra.png'
     />
   );
 

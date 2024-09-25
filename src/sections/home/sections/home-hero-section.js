@@ -13,6 +13,8 @@ import { useRouter } from 'src/routes/hooks';
 import { bgBlur } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
+
+
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
@@ -114,7 +116,7 @@ export default function HomeHeroSection() {
         width: { sm : '98vw', xs: '100vw' }, 
         height: '100vh',
       }}
-      > 
+      >
       <StyledRoot
         ref={heroRef}
         sx={{
