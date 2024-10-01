@@ -223,7 +223,7 @@ export default function HomeHeroSection() {
                 </Stack>
 
                 <Typography sx={{ fontSize: 20, fontFamily: 'Inter, sans-serif !important' }}>
-                  <span style={{ color: '#e84142', fontSize: '24px' }}>Ultra Software Labs</span> is a leading software, website, database, mobile and e-commerce development company. With a passion for innovation and a commitment to delivering top-notch solutions, we empower organizations to thrive in the digital landscape.
+                  <span style={{ color: '#e84142', fontSize: '24px' }}>Ultra Software Labs</span> is a leading software, website, mobile, e-commerce, and database development company. With a passion for innovation and a commitment to delivering top-notch solutions, we empower organizations to thrive in the digital landscape.
                 </Typography>
               </Stack>
 

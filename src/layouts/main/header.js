@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import { Typography } from '@mui/material';
@@ -8,6 +9,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
+import { RouterLink } from 'src/routes/components';
 import { useActiveLink } from 'src/routes/hooks/use-active-link';
 
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
@@ -21,6 +23,7 @@ import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
+
 
 // ----------------------------------------------------------------------
 
@@ -83,7 +86,9 @@ export default function Header() {
           <Stack sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent:'space-between', width: 1, mx: {xl: -4, md:4,  xs: 2}}}>
             <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '4px'}}>
               <Logo />
-              <Typography sx={{ whiteSpace: 'nowrap', fontSize: { md: 22, xs: 22 }}} >Ultra Software Labs</Typography>
+              <Link component={RouterLink} href="/" sx={{ display: 'contents' }}>
+                <Typography sx={{ whiteSpace: 'nowrap', fontSize: { md: 22, xs: 22 }, color: 'white'}} >Ultra Software Labs</Typography>
+              </Link>
             </Stack>
 
             <Box sx={{ flexGrow: 1 }} />

@@ -19,7 +19,7 @@ import { AuthProvider } from 'src/auth/context/jwt';
 export const metadata = {
   title: 'Ultra Software Labs',
   description:
-    'Ultra Software Labs is a leading software, website, database, mobile and e-commerce development company. With a passion for innovation and a commitment to delivering top-notch solutions, we empower organizations to thrive in the digital landscape.s',
+    'Ultra Software Labs is a leading software, website, mobile and e-commerce, database development company. With a passion for innovation and a commitment to delivering top-notch solutions, we empower organizations to thrive in the digital landscape.s',
   keywords: 'ultra, soft, labs',
   themeColor: '#000000',
   manifest: '/manifest.json',

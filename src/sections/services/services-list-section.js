@@ -43,7 +43,7 @@ const serviceList = [
   {
     title: 'Database Development',
     descriptions: [
-      'At Newmira Digital, we have extensive expertise in database development, enabling businesses to efficiently manage and leverage their data for optimal performance and decision-making. Our team of skilled database developers designs and builds robust and scalable database solutions tailored to your specific requirements.',
+      'At Ultra Software labs, we have extensive expertise in database development, enabling businesses to efficiently manage and leverage their data for optimal performance and decision-making. Our team of skilled database developers designs and builds robust and scalable database solutions tailored to your specific requirements.',
       `Whether it's designing a relational database, implementing data warehousing solutions, or optimizing existing databases, we ensure data integrity, security, and accessibility. With our deep understanding of database technologies and best practices, we provide comprehensive solutions that enhance data management, improve data-driven insights, and support the growth and success of your business. Trust us to develop a robust database infrastructure that empowers you to harness the full potential of your data assets.`,
     ],
     svg: 'database',
